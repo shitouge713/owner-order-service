@@ -21,7 +21,6 @@ public class CartServiceImpl implements ICartService {
         cart.setUserId(22222L);
         cart.setSkuId("22222");
         cartDomain.save(cart);
-        Integer a = 10/0;
         return true;
     }
 

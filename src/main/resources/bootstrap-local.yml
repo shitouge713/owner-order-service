@@ -22,9 +22,15 @@ spring:
         order:
           type: com.alibaba.druid.pool.DruidDataSource
           driverClassName: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://10.180.3.2:3306/h_order?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8&allowMultiQueries=true
-          username: test
-          password: Bx1jZLR3ZK5pic72NwaE
+          url: jdbc:mysql://192.168.85.76:3306/h_order?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8&allowMultiQueries=true
+          username: root
+          password: 123456
+        order-test:
+            type: com.alibaba.druid.pool.DruidDataSource
+            driverClassName: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://10.180.3.2:3306/h_order?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8&allowMultiQueries=true
+            username: test
+            password: Bx1jZLR3ZK5pic72NwaE
         hadoop:
           type: com.alibaba.druid.pool.DruidDataSource
           driverClassName: com.mysql.cj.jdbc.Driver
