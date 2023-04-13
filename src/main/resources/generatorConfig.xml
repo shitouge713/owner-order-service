@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!--数据库驱动包路径 -->
+    <context id="generator" targetRuntime="MyBatis3">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 序列化 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <commentGenerator>
+            <!-- 设置不生成时间戳 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 需要不生成xml中@mbg.generated的注释 -->
+            <property name="suppressAllComments" value="true"/>
+            <!--是否添加数据库表中字段的注释-->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+        <!--数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.100.19.122:3306/h_order" userId="devops"
+                        password="12345678"/>
+        <!--生成的数据表对应实体 包路径 -->
+        <javaModelGenerator targetPackage="com.owner.order.dao.pojo" targetProject="src/main/java"/>
+        <!--生成xml mapper文件 路径 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+        <!-- 生成的Dao接口 的包路径 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.owner.order.dao.mapper" targetProject="src/main/java"/>
+        <!--对应数据库表名 -->
+        <table tableName="o_cart"></table>
+    </context>
+</generatorConfiguration>
