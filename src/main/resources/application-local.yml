@@ -66,11 +66,3 @@ spring:
 server:
   port: 8098
 
-hsh:
-  search:
-    index:
-      es-url: 10.180.3.26:9200
-      es-user-name: elastic
-      es-user-password: Dyi0s10defIV
-      order-global-index-name: sxl-test-demo-20230901
-

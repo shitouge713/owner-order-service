@@ -19,4 +19,10 @@ public class CarController {
     public Boolean save() {
         return cartService.save();
     }
+
+    @GetMapping("/init")
+    public void init() {
+        cartService.init();
+    }
+
 }
