@@ -88,17 +88,17 @@
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <version>${ali.version}</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>${ali.version}</version>
         </dependency>
-        <!--配置中心客户端-->
+        &lt;!&ndash;配置中心客户端&ndash;&gt;
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>${ali.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
