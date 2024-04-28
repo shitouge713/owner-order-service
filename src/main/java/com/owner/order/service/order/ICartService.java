@@ -1,4 +1,4 @@
-package com.owner.order.service;
+package com.owner.order.service.order;
 
 public interface ICartService {
     Boolean save();

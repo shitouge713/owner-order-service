@@ -1,4 +1,4 @@
-package com.owner.order.service;
+package com.owner.order.service.extend;
 
 /**
  * 下单操作扩展接口

@@ -1,4 +1,4 @@
-package com.owner.order.service;
+package com.owner.order.service.order;
 
 import com.owner.order.vo.OrderReqVO;
 import com.owner.order.vo.Result;
