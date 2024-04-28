@@ -1,6 +1,7 @@
 package com.owner.order.service.extend.impl;
 
 import com.owner.order.service.extend.CreateOrderHandler;
+import com.owner.order.vo.OrderReqVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,7 @@ public class ParamVerifyHandler implements CreateOrderHandler {
         return true;
     }
     @Override
-    public void beforeToDB() {
+    public void beforeToDB(OrderReqVO vo) {
         log.info("ParamVerifyHandler,参数校验逻辑");
     }
 }

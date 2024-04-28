@@ -3,6 +3,7 @@ package com.owner.order.service.extend;
 import com.owner.order.context.CreateOrderContext;
 import com.owner.order.exception.NoWarnException;
 import com.owner.order.util.SpringUtils;
+import com.owner.order.vo.OrderReqVO;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -88,9 +89,9 @@ public abstract class CommonPluginChain<P extends OperatorHandler> {
     /**
      * 初始化插件
      */
-    public void initPlugin() {
+    public void initPlugin(OrderReqVO vo) {
         //初始化上下文
-        CreateOrderContext.initConfig();
+        CreateOrderContext.initConfig(vo);
         //初始化插件，canHandle()用来过滤符合条件，需要执行的插件
         List<P> pluginList = getAllPlugins().stream().filter(a -> a.canHandle()).collect(Collectors.toList());
         currentPluginChainThreadLocal.set(pluginList);

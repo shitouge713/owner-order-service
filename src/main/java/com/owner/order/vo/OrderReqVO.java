@@ -34,7 +34,6 @@ public class OrderReqVO implements Serializable {
     @ApiModelProperty(value = "原订单编码 补扣工单创建的补扣单该字段不为空")
     private String originOrderNoSub;
 
-    @NotEmpty(message = "用户Id非空")
     @ApiModelProperty(value = "用户Iid", required = true)
     private String userId;
 
@@ -54,7 +53,6 @@ public class OrderReqVO implements Serializable {
     @ApiModelProperty(value = "订单优惠金额")
     private BigDecimal disctAmount = new BigDecimal(0);
 
-    @NotNull(message = "订单来源非空")
     @ApiModelProperty(value = "来源，1：预制菜；2：供应链；3:619；4：众包；5：易触；6：微米；7:美智；8:到店；9:到家；10:天波；11:自研")
     private Integer sourceType;
 
@@ -86,7 +84,6 @@ public class OrderReqVO implements Serializable {
     @ApiModelProperty(value = "外部订单id	目前是微信支付分支付返回的订单号")
     private String outOrderId;
 
-    //@NotEmpty(message = "创建人非空")
     @ApiModelProperty(value = "创建人id", required = true)
     private String createId;
 
@@ -167,7 +164,6 @@ public class OrderReqVO implements Serializable {
     @ApiModelProperty(value = "点位地址")
     private String poiAddress;
 
-    //@NotNull(message = "商品列表非空")
     @ApiModelProperty(value = "商品列表")
     private List<OrderGoods> goodsList;
 

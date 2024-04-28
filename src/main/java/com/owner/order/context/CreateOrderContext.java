@@ -1,6 +1,8 @@
 package com.owner.order.context;
 
 
+import com.owner.order.vo.OrderReqVO;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -20,8 +22,8 @@ public class CreateOrderContext {
     /**
      * 初始化插件的上下文
      */
-    public static void initConfig() {
-        simpleItemConfigDtoThreadLocal.set("simpleItemConfigDto");
+    public static void initConfig(OrderReqVO vo) {
+        simpleItemConfigDtoThreadLocal.set(vo);
         context.set(new HashMap<>());
     }
 

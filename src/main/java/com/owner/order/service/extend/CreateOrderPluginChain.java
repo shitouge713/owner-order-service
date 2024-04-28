@@ -1,5 +1,6 @@
 package com.owner.order.service.extend;
 
+import com.owner.order.vo.OrderReqVO;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,8 +13,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class CreateOrderPluginChain extends CommonPluginChain<CreateOrderHandler> {
 
-    public void prepareUploadToDB() {
-        forEachChainConsumer(a -> a.beforeToDB());
+    public void prepareUploadToDB(OrderReqVO vo) {
+        forEachChainConsumer(a -> a.beforeToDB(vo));
     }
 
     public void afterUploadToDBWithTst() {

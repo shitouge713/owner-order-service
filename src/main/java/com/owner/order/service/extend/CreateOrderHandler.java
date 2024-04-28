@@ -1,5 +1,7 @@
 package com.owner.order.service.extend;
 
+import com.owner.order.vo.OrderReqVO;
+
 /**
  * 下单操作扩展接口
  * 类似spring启动时的processor扩展接口
@@ -11,7 +13,7 @@ public interface CreateOrderHandler extends OperatorHandler {
     /**
      * 插入数据库前扩展操作
      */
-    default void beforeToDB() {
+    default void beforeToDB(OrderReqVO vo) {
     }
 
     /**

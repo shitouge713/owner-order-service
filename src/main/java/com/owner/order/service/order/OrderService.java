@@ -4,5 +4,5 @@ import com.owner.order.vo.OrderReqVO;
 import com.owner.order.vo.Result;
 
 public interface OrderService {
-    Result<String> createOrder();
+    Result<String> createOrder(OrderReqVO vo);
 }
