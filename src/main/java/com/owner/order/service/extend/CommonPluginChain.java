@@ -20,7 +20,10 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 /**
- * 下单请求初始化插件操作
+ * 通用请求插件操作
+ * 1. 插件初始化操作
+ * 2. 插件执行操作
+ * OperatorHandler：表示扩展类对哪个接口操作
  *
  * @author sxl
  */

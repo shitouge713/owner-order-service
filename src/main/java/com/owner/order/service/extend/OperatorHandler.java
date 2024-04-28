@@ -1,7 +1,7 @@
 package com.owner.order.service.extend;
 
 /**
- * 判断是否可以处理该请求
+ * 扩展基础接口：判断插件是否需要执行
  *
  * @author sxl
  */

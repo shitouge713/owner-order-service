@@ -12,6 +12,9 @@ import javax.annotation.Resource;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    /**
+     * 拿到扩展插件链
+     */
     @Resource
     private CreateOrderPluginChain createOrderPluginChain;
 
