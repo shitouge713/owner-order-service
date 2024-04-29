@@ -26,6 +26,12 @@ public class OrderServiceImpl implements OrderService {
             //插件初始化
             createOrderPluginChain.initPlugin(vo);
             //TODO 业务逻辑
+            /*Boolean isLock = redisUtils.getLock(OrderConfig.ORDER_SAVE_KEY + vo.getApplyCode(),
+                    "1", 120L);
+            if (!isLock) {
+                log.warn("开柜记录号已经存在,订单已经在保存中了,不能重复添加订单,applyCode:{}", vo.getApplyCode());
+                return Result.failed(ReturnStatusEnum.ORDER_IS_EXIST);
+            }*/
             log.info("执行下单业务逻辑");
             //插入前扩展操作
             createOrderPluginChain.prepareUploadToDB(vo);

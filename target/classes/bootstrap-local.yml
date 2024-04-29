@@ -1,16 +1,17 @@
 spring:
   application:
     name: owner-order-web
-    #cloud:
-    #nacos:
-    #discovery:
-    #server-addr: localhost:8848
-    #namespace: owner-order-parent
-    #config:
-    #server-addr: localhost:8848
-    #namespace: owner-order-parent
-    #file-extension: yml
-    #group: HSH_GROUP
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: owner-order-parent
+      config:
+        server-addr: localhost:8848
+        namespace: owner-order-parent
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
       #alibaba:
         #seata:
         #该值必须和config.txt文件中的分组名称一致
