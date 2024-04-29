@@ -1,7 +1,6 @@
 package com.owner.order.service.order.impl;
 
 import com.owner.order.dao.domain.CartDomain;
-import com.owner.order.dao.pojo.OCart;
 import com.owner.order.service.order.ICartService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +21,12 @@ public class CartServiceImpl implements ICartService {
 
     @Override
     public Boolean save() {
-        OCart cart = new OCart();
+        /*OCart cart = new OCart();
         cart.setMerchantCode("22222");
         cart.setUserId(22222L);
-        cart.setSkuId("22222");
+        cart.setSkuId("22222");*/
         //cartDomain.save(cart);
+        log.info("订单业务代码执行");
         return true;
     }
 
