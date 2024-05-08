@@ -1,4 +1,4 @@
-package com.owner.order.mqservice;
+package com.owner.order.mq;
 
 import com.alibaba.fastjson.JSONObject;
 import com.owner.order.config.Jms;

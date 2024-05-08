@@ -2,7 +2,7 @@ package com.owner.order.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.owner.order.config.Jms;
-import com.owner.order.mqservice.TransactionProducer;
+import com.owner.order.mq.TransactionProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.SendResult;

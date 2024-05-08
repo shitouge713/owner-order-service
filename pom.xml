@@ -83,11 +83,17 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
             <version>${ali.version}</version>
-        </dependency>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>...</groupId>
+                    <artifactId>...</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -150,11 +156,16 @@
             <version>${swagger.version}</version>
         </dependency>
         <!--feign依赖-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.2.0.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>-->
         <!--hystrix依赖，主要是用  @HystrixCommand -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

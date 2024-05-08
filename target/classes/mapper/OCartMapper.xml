@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.owner.order.dao.mapper.OCartMapper">
+    <resultMap id="BaseResultMap" type="com.owner.order.dao.pojo.OCart">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="biz_type" jdbcType="INTEGER" property="bizType"/>
+        <result column="merchant_code" jdbcType="VARCHAR" property="merchantCode"/>
+        <result column="sku_id" jdbcType="VARCHAR" property="skuId"/>
+        <result column="quantity" jdbcType="INTEGER" property="quantity"/>
+        <result column="valid" jdbcType="INTEGER" property="valid"/>
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate"/>
+        <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify"/>
+    </resultMap>
+
+</mapper>
