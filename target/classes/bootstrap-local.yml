@@ -67,3 +67,13 @@ spring:
 server:
   port: 8098
 
+#开启feign支持hystrix  (注意，一定要开启，旧版本默认支持，新版本默认关闭)
+# #修改调用超时时间默认是1秒就算超时
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
