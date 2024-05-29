@@ -27,6 +27,15 @@ public class CartServiceImpl implements ICartService {
         cart.setUserId(22222L);
         cart.setSkuId("22222");
         cartDomain.save(cart);
+        //模拟耗时10s
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        int a = 10;
+        int b = 0;
+        int c = a / b;
         log.info("订单业务插入数据成功");
         return true;
     }

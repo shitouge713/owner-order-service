@@ -81,13 +81,15 @@ feign:
 seata:
   enabled: true
   application-id: owner-order-parent
+  # 要和application.yml或者nacos配置文件中service.vgroupMapping.my_test_tx_group=default的【my_test_tx_group】保持一致
   tx-service-group: my_test_tx_group
   config:
     type: nacos
     nacos:
-      namespace:
+      namespace: seata
       serverAddr: 127.0.0.1:8848
       group: SEATA_GROUP
+      dataId: seataServer.properties
       #username: "nacos"
       #password: "nacos"
   registry:
@@ -96,6 +98,6 @@ seata:
       application: seata-server
       server-addr: 127.0.0.1:8848
       group: SEATA_GROUP
-      namespace: seata-server
+      namespace: seata
       #username: "nacos"
       #password: "nacos"

@@ -33,11 +33,11 @@ public class OrderServiceImpl implements OrderService {
                 return Result.failed(ReturnStatusEnum.ORDER_IS_EXIST);
             }*/
             log.info("执行下单业务逻辑");
-            //插入前扩展操作
+            //订单保存前扩展操作
             createOrderPluginChain.prepareUploadToDB(vo);
-            //插入后扩展操作（事务内）
+            //订单保存后扩展操作（事务内）
             createOrderPluginChain.afterUploadToDBWithTst();
-            //插入后扩展操作（事务外）
+            //订单保存后扩展操作（事务外）
             createOrderPluginChain.afterUploadToDBWithoutTst();
         } finally {
             createOrderPluginChain.clearThreadLocal();

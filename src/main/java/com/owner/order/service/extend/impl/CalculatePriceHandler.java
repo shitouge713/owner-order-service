@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-@Order(2)
+@Order(100)
 public class CalculatePriceHandler implements CreateOrderHandler {
     @Override
     public boolean canHandle() {
