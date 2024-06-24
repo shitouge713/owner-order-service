@@ -1,5 +1,7 @@
 package com.owner.order.service.extend;
 
+import com.owner.order.vo.OrderReqVO;
+
 /**
  * 扩展基础接口：判断插件是否需要执行
  *
@@ -13,7 +15,7 @@ public interface OperatorHandler {
      *
      * @return 是否可以处理
      */
-    default boolean canHandle() {
+    default boolean canHandle(OrderReqVO vo) {
         return true;
     }
 

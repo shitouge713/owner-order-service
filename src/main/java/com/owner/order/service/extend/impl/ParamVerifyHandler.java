@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Order(6)
 public class ParamVerifyHandler implements CreateOrderHandler {
     @Override
-    public boolean canHandle() {
+    public boolean canHandle(OrderReqVO vo) {
         return true;
     }
     @Override

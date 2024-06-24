@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Order(7)
 public class RepertoryHandler implements CreateOrderHandler {
     @Override
-    public boolean canHandle() {
+    public boolean canHandle(OrderReqVO vo) {
         return true;
     }
 

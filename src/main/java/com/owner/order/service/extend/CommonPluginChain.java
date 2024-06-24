@@ -4,6 +4,7 @@ import com.owner.order.context.CreateOrderContext;
 import com.owner.order.exception.NoWarnException;
 import com.owner.order.util.SpringUtils;
 import com.owner.order.vo.OrderReqVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -28,6 +29,7 @@ import java.util.stream.Collectors;
  *
  * @author sxl
  */
+@Slf4j
 @Component
 public abstract class CommonPluginChain<P extends OperatorHandler> {
 
@@ -44,6 +46,7 @@ public abstract class CommonPluginChain<P extends OperatorHandler> {
     @EventListener(ApplicationReadyEvent.class)
     public void applicationReady() {
         allPlugins = Collections.unmodifiableList(springUtils.getSortedBeansOfType(getPluginClass()));
+        log.info("所有扩展插件已装载到容器的Bean<CommonPluginChain>中");
     }
 
 
@@ -93,7 +96,7 @@ public abstract class CommonPluginChain<P extends OperatorHandler> {
         //初始化上下文
         CreateOrderContext.initConfig(vo);
         //初始化插件，canHandle()用来过滤符合条件，需要执行的插件
-        List<P> pluginList = getAllPlugins().stream().filter(a -> a.canHandle()).collect(Collectors.toList());
+        List<P> pluginList = getAllPlugins().stream().filter(a -> a.canHandle(vo)).collect(Collectors.toList());
         currentPluginChainThreadLocal.set(pluginList);
     }
 

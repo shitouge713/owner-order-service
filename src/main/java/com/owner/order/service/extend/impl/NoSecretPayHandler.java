@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Order(5)
 public class NoSecretPayHandler implements CreateOrderHandler {
     @Override
-    public boolean canHandle() {
+    public boolean canHandle(OrderReqVO vo) {
         return true;
     }
 

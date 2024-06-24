@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Order(100)
 public class CalculatePriceHandler implements CreateOrderHandler {
     @Override
-    public boolean canHandle() {
+    public boolean canHandle(OrderReqVO vo) {
         return true;
     }
 

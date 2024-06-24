@@ -9,7 +9,8 @@ public enum ReturnStatusEnum {
     SENTINEL_ERROR("500", "服务器限流"),
     SERVER_ERROR("4000", "服务器错误"),
     PARAM_ERROR("3000", "参数错误,%s"),
-    FAIL_GET_DISTRIBUTED_LOCK("3001", "获取分布式锁失败");
+    FAIL_GET_DISTRIBUTED_LOCK("3001", "获取分布式锁失败"),
+    DATA_EXCEPTION("4010","数据库异常");
 
     private final String value;
     private final String desc;
